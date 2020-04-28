@@ -1,4 +1,4 @@
-window.$ = window.jQuery = function(selectorOrArrayOrTemplate) {
+window.$ = window.jQuery = function (selectorOrArrayOrTemplate) {
   let elements;
   if (typeof selectorOrArrayOrTemplate === "string") {
     if (selectorOrArrayOrTemplate[0] === "<") {
@@ -46,7 +46,7 @@ jQuery.fn = jQuery.prototype = {
     if (children instanceof Element) {
       this.get(0).appendChild(children);
     } else if (children instanceof HTMLCollection) {
-    	let childrenList = Array.from(children)
+      let childrenList = Array.from(children)
       for (let i = 0; i < childrenList.length; i++) {
         this.get(0).appendChild(childrenList[i]);
       }
@@ -81,7 +81,7 @@ jQuery.fn = jQuery.prototype = {
   children() {
     const array = [];
     this.each(node => {
-        array.push(...node.children);
+      array.push(...node.children);
     });
     return jQuery(array);
   },
