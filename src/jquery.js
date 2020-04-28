@@ -80,9 +80,7 @@ jQuery.fn = jQuery.prototype = {
   children() {
     const array = [];
     this.each(node => {
-      if (array.indexOf(node.parentNode) === -1) {
         array.push(...node.children);
-      }
     });
     return jQuery(array);
   },
