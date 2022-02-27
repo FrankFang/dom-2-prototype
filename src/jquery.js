@@ -57,7 +57,7 @@ jQuery.fn = jQuery.prototype = {
     let array = [];
     for (let i = 0; i < this.elements.length; i++) {
       const elements2 = Array.from(this.elements[i].querySelectorAll(selector));
-      array = array.concat(this.elements2);
+      array = array.concat(elements2);
     }
     array.oldApi = this; // this 就是 旧 api
     return jQuery(array);
